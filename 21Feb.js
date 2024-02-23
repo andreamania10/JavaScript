@@ -150,3 +150,23 @@ for (let i = 0; i < 10; i++) {
 
 Break se rompe el bucle; 
 Continue ejecuta a la siguiente ejecución. 
+
+FUNCIÓN QUE DEVUELVE UN VALOR:
+Parámetros = Proceso = Output;
+Función que no devuelve nada:
+function noDevuelveNada(a, b) {
+    const resultado = a + b;
+    console.log(resultado);
+}
+
+noDevuelveNada(2, 3);
+
+Función que devuelve algo:
+function devuelveValor(a, b) {
+    const resultado = a + b;
+    return resultado;
+}
+
+const valorDevuelto = devuelveValor(2, 3);
+console.log(valorDevuelto); (EL VALOR DEVUELTO ESTÁ EJECUTADO FUERA)
+

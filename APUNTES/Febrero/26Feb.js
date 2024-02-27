@@ -14,16 +14,49 @@ empezarTodo(3, 4, callback);
 - setTimeout(miFuncion, 2000): cada 2 segundos: cada numero que pasa, aumenta el número. 
 - setInterval(miFuncion, 2000): cada 2 segundos: para hacer un cronómetro.
 
-//MÉTODOS PARA TRABAJO CON CADENAS: 
-Una constante llamada nombre = "ramona"
-    - nombre.substring(1, 3): sería //am
-        - nombre.substring(2): //mona
-- nombre.slice(-2): //na: Acepta negativos. Substring no
-- nombre.length: //numero de letras. 6
-- nombre.toUpperCase: //palabra en mayúsculas: RAMONA
-- nombre.toLowerCase(): //palabra en minúsculas: ramona
-- nombre.includes("a"): //Booleano: true
-- nombre.indexOf("a"): //La posición de la primera 'a' de la palabra: 1
-- nombre.lastIndexOf("a"): //La posición de la última 'a' de la palabra: 5
-- nombre.charAt(0): //Primera letra de la palabra: R; 
-- nombre[0]: //Primera letra de la palabra: R.
+
+//ARROW FUNCTIONS: Una expresión como función se refiere a una forma de definir una función utilizando una expresión. Implica asignar una función anónima a una variable. 
+const sum = function (a, b) {
+    return (a + b);
+}
+
+const nombreDeLaFunción = parámetros => cuerpoOvalorDevuelto //de un modo resumido
+
+//SIN PARÁMETROS
+const saludar = () => {
+    console.log('Hola');
+}
+
+saludar(); // Hola
+
+//CON UN PARÁMETRO: En los parámetros los paréntesis es opcional: Solo tengas un solo parámetro de entrada. 
+const multiplicar1 = (param) => {
+    const resultado = param * 2;
+    console.log(resultado)
+}
+
+const multiplicar2 = param => {
+    const resultado = param * 2;
+    console.log(resultado)
+}
+
+multiplicar1(4);  // 8
+multiplicar2(4);  // 8
+
+//MÚLTIPLES PARÁMETROS: 
+const multiplicar = (x, y) => {
+    const resultado = x * y;
+    console.log(resultado);
+}
+
+multiplicar(2, 3);  // 6
+
+//SÓLO CON RETURN: Las siguientes dos funciones son equivalentes. Cuando una functión no tiene llaves, todo su contenido forma parte de su return.
+const multiplicar1 = (x, y) => { return x * y };
+const multiplicar2 = (x, y) => x * y;
+
+const valor1 = multiplicar1(2, 3);
+const valor2 = multiplicar2(2, 3);
+
+console.log(valor1); // 6
+console.log(valor2); // 6

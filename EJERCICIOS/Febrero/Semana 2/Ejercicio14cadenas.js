@@ -225,3 +225,4 @@ const firstWord = (txt) => {
 
 const v = firstWord('Amanda y Antonia')
 console.log(v)
+

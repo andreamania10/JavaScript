@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<br>
+<label for="campoNombre"> Nombre del cliente:</label><br>
+<input type="text" id="campoNombre"><br>
+
+<br> <label for="material">Material de la caja:</label>
+<br><select id="material">
+    <br>
+    <option value="madera">Madera</option>
+    <br>
+    <option value="hierro">Hierro</option>
+    <br>
+    <option value="plastico">Plástico</option>
+</select> <br>
+
+<p><br>Seleccione unas dimensiones para la caja:</p></br>
+<br><input type="radio" name="rBtn" class="radiuBtn" value="Diminutas"> <label for=".radiuBtn">Diminutas</label>
+<br><input type="radio" name="rBtn" class="radiuBtn" value="Medianas"> <label for=".radiuBtn">Medianas</label>
+<br><input type="radio" name="rBtn" class="radiuBtn" value="Grandes"><label for=".radiuBtn">Grandes</label> <br>
+
+<label for="comments"><br> Comentarios: </label></br>
+<textarea id="comments" cols="30" rows="10"></textarea><br /><br />
+
+<br><button type="button">Enviar</button></br>
+<br><br><input type="text" id="result" style="width: 600px;">
+</form>
+
+<script>
+    const formulario = () => {
+        const nombre = document.querySelector('#campoNombre').value;
+        console.log(nombre)
+        const mater = document.querySelector('#material').value;
+        console.log(mater)
+        const valor = document.querySelector('.radiuBtn:checked').value;
+        console.log(valor)
+        const comment = document.querySelector('#comments').value;
+        console.log(comment)
+        const texto = `${nombre} ha pedido una caja de ${mater} con unas dimensiones ${valor}. ${comment}`;
+        document.querySelector('#result').value = texto;
+    }
+
+    document.querySelector('button').addEventListener('click', formulario);
+
+</script>
+</body>
+
+</html>

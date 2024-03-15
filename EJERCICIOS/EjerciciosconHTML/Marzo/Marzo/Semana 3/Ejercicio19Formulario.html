@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <form>
+        <input type="text" id="numero"> <br>
+        <button type="button">Evaluar</button> <br>
+        <input type="text" id="result"> <br>
+    </form>
+
+    <script>
+
+        const resultado = Math.floor(Math.random() * 6)
+        let intentos = [];
+        const evaluar = () => {
+            const n = document.querySelector('#numero').value;
+            const r = document.querySelector('#result');
+            if (n == resultado) {
+                r.value = "Has ganado el juego"
+            } else {
+                r.value = 'Has fallado el número'
+                intentos++;
+                if (intentos == 3) {
+                    r.value = 'Has perdido'
+                }
+            }
+        }
+
+        document.querySelector('button').addEventListener('click', evaluar);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label for="noches"> Introduzca el número de noches </label>
+        <input type="text" id="noches">
+
+        <select id="lugar">
+            <option value="oviedo">Oviedo</option>
+            <option value="tokyo">Tokyo</option>
+            <option value="madrid">Madrid</option>
+            <option value="barcelona">Barcelona</option>
+        </select>
+
+        <button type="button">Calcular Coste</button> <br>
+
+        <label for="hotel"> Coste hotel:</label>
+        <input type="hotel" id="hotel"> <br>
+
+        <label for="viaje"> Coste viaje:</label>
+        <input type="text" id="viaje"> <br>
+
+        <label for="coche"> Coste alquiler coche:</label>
+        <input type="text" id="coche"> <br>
+
+        <label for="total"> Coste total:</label>
+        <input type="text" id="total"> <br>
+    </form>
+
+    <script>
+        const calculateHotelCost = (nNights) => nNights * 140;
+
+        const calculateAirplaneCost = (lugar) => {
+            let coste;
+            if (lugar == "oviedo") {
+                return coste = 15;
+
+            } else if (lugar === "tokyo") {
+                return coste = 700;
+
+            } else if (lugar === "madrid" || lugar === "barcelona") {
+                return coste = 90;
+            }
+
+            if (nNights > 3) {
+                return coste *= 0.9;
+            }
+        }
+
+        const calculateRentingCarCost = (nNights) => {
+            let coste = nNights * 40;
+            if (nNights >= 7) {
+                coste -= 50;
+            } else if (nNights >= 3) {
+                coste -= 20;
+            }
+            return coste;
+        }
+
+
+        const calculateCost = () => {
+            const numNights = document.querySelector("#noches").value;
+            const lugar = document.querySelector("#lugar").value;
+
+            const hotelCost = calculateHotelCost(numNights);
+            const airplaneCost = calculateAirplaneCost(lugar);
+            const carCost = calculateRentingCarCost(numNights);
+
+            document.querySelector("#hotel").value = hotelCost;
+            document.querySelector("#viaje").value = airplaneCost;
+            document.querySelector("#coche").value = carCost;
+            document.querySelector("#total").value = hotelCost + airplaneCost + carCost + '€';
+
+
+        }
+        document.querySelector('button').addEventListener('click', calculateCost);
+
+    </script>
+</body>
+
+</html>

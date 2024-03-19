@@ -1,0 +1,30 @@
+.imagen {
+    width: 512px;
+    height: 512px;
+}
+
+.container {
+    width: 512px;
+    height: 512px;
+    overflow: hidden;
+}
+
+.fotos {
+    width: 1536px;
+    transition: 1s;
+    display: flex;
+}
+
+
+.huevo {
+    background-image: url(../Fotos/tuxes/PinguLinux_Huevo_Kinder.jpg);
+}
+
+.celula {
+    background-image: url(../Fotos/tuxes/PinguLinux_Celula.png);
+}
+
+.rey {
+    background-image: url(../Fotos/tuxes/PinguLinux_King.png);
+
+}

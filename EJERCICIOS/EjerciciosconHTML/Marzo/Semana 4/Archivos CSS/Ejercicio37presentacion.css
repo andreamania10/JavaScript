@@ -1,0 +1,13 @@
+.box {
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.result {
+    margin: auto;
+    text-align: center;
+    font-size: larger;
+    width: 300px;
+}

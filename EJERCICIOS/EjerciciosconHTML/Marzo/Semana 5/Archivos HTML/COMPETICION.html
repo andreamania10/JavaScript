@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            width: 1024px;
+            height: 1000px;
+            margin: auto;
+            background-color: red;
+            border-radius: 20px;
+            transition: 1s;
+            display: flex;
+        }
+
+        .container:hover {
+            background-color: blue;
+        }
+
+        .column1 {
+            background: green;
+            width: 200px;
+            height: 200px;
+
+        }
+
+        .column2 {
+            background: yellow;
+            width: 200px;
+            height: 200px;
+        }
+
+        .column2 a {
+            background: url(/EJERCICIOS/Fotos/img/bluemap.jpg);
+            width: 200px;
+            height: 200px;
+
+
+        }
+
+        .column3 {
+            background: black;
+            width: 200px;
+            height: 200px;
+        }
+
+        td {
+            background-image: url(/EJERCICIOS/Fotos/img/goldcoin.png);
+            width: 50px;
+            height: 50px;
+
+        }
+
+        .larga {
+            height: 10px;
+            overflow: auto;
+
+        }
+
+        .capa {
+            width: 500px;
+            position: fixed;
+            display: block;
+            background-color: red;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="capa">
+        <img src="/EJERCICIOS/Fotos/img/goldcoin.png" width="100px" height="100px">
+    </div>
+    <div class="cap2"></div>
+    <div class="container">
+        <div class="column1">
+            <a href="#">Andrea</a>
+            <a href="#">Sara</a>
+            <a href="#">Maria</a>
+            <a href="#">Sam</a>
+        </div>
+        <div class="column2">
+            <a href="https://www.google.es">Foto</a>
+        </div>
+        <div class="column3">
+            <table>
+                <tr>
+                    <td class="larga">
+                        fila1hj a jkhckjsdh cjkashkjchaskj hdcjksh djk Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit. Natus odit unde debitis neque, nostrum, eligendi quia minus ullam sapiente,
+                        quod quis! Cumque exercitationem quae, magni eligendi distinctio maiores? Maxime, et!
+
+
+                    </td>
+                    <td>
+                        fila2
+                    </td>
+                    <td>
+                        fila1
+                    </td>
+                    <td>
+                        fila2
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        fila1
+                    </td>
+                    <td>
+                        fila2
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        fila1
+                    </td>
+                    <td>
+                        fila2
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>

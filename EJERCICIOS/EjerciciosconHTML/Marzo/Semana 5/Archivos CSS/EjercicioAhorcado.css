@@ -1,0 +1,49 @@
+@font-face {
+    font-family: myFont;
+    src: url(../Fotos/Franchise.ttf);
+}
+
+h1 {
+    font-family: myFont;
+    font-size: 65px;
+    width: 350px;
+}
+
+button {
+    background-color: rgb(248, 119, 73);
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin-top: 15px;
+}
+
+.container {
+    display: flex;
+    margin: auto;
+    max-width: 800px;
+}
+
+.container .col {
+    flex: 1;
+}
+
+.ahorcado {
+    background-image: url(../Fotos/hangman-game_pm-1024x212.png);
+    width: 300px;
+    height: 333px;
+    margin-top: 100px;
+    background-size: auto 100%;
+}
+
+input {
+    padding: 7px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.hiddenWord {
+    font-weight: bold;
+    font-size: 2rem;
+}

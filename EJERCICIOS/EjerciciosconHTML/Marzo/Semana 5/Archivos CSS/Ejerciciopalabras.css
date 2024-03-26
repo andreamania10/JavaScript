@@ -1,0 +1,45 @@
+.container {
+    max-width: 800px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-size: small;
+}
+
+.frase {
+    border: 3px dotted red;
+    padding: 20px;
+    width: 100%;
+    border-radius: 15px;
+    font-size: 2rem;
+    box-sizing: border-box;
+}
+
+.frase .button:hover {
+    background-color: pink;
+}
+
+.correct {
+    border: 3px dotted blue;
+    padding: 20px;
+    width: 100%;
+    border-radius: 15px;
+    font-size: 2rem;
+    box-sizing: border-box;
+}
+
+.correct .button:hover {
+    background-color: pink;
+}
+
+button {
+    margin-top: 10px;
+    width: 150px;
+    height: 50px;
+    background-position: auto 100%;
+    font-size: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
